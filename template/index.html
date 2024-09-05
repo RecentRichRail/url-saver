@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Link Saver</title>
+</head>
+<body>
+  <div class="container">
+    <div class="section">
+      <h1>Links</h1>
+      <div>
+        <h2>Select Link</h2>
+        <form id="linkForm"></form>
+        <ul id="linkListItems"></ul>
+      </div>
+
+      <button id="editToggleBtn">Edit Links</button>
+      <div id="editMode" style="display: none;">
+        <h2>Edit Links</h2>
+        <form id="addLinkForm">
+          <input type="text" id="newLinkUrl" placeholder="Link URL" required>
+          <button type="submit">Add Link</button>
+        </form>
+        <div id="viewMode">
+          <h2>Add New Link</h2>
+          <form id="viewAddLinkForm">
+            <input type="text" id="viewNewLinkUrl" placeholder="Link URL" required>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
